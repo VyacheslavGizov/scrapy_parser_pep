@@ -2,14 +2,16 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).parent.parent
+RESULTS_DIRNAME = 'results'
+PEP_FILENAME = 'pep_%(time)s.csv'
 
 BOT_NAME = 'pep_parse'
-SPIDER_MODULES = ['pep_parse.spiders']
-NEWSPIDER_MODULE = 'pep_parse.spiders'
+NEWSPIDER_MODULE = f'{BOT_NAME}.spiders'
+SPIDER_MODULES = [NEWSPIDER_MODULE]
 ROBOTSTXT_OBEY = True
 
 FEEDS = {
-    'results/pep_%(time)s.csv': {
+    f'{RESULTS_DIRNAME}/{PEP_FILENAME}': {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
         'overwrite': True
