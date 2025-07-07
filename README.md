@@ -45,6 +45,6 @@ scrapy_parser_pep/results/
 
 ---
 
-## Авторы:
+## Авторы
 
-[Вячеслав Гизов](https://github.com/VyacheslavGizov).
+[Вячеслав Гизов](https://github.com/VyacheslavGizov)
